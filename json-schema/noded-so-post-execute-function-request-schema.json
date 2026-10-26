@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/noded-so/main/json-schema/noded-so-post-execute-function-request-schema.json",
+  "title": "PostExecuteFunctionRequest",
+  "x-generated": "2026-10-25",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/noded-so-openapi-generated.yml#/components/schemas/PostExecuteFunctionRequest",
+  "type": "object",
+  "properties": {
+    "functionName": {
+      "type": "string",
+      "description": "Which function to run."
+    },
+    "configuration": {
+      "type": "array",
+      "description": "Install‑time values."
+    },
+    "values": {
+      "type": "array",
+      "description": "Per‑run input values matching resolveInputs."
+    },
+    "templateConnectedProvider": {
+      "type": "object",
+      "description": "Connection of the installer (for reading assets)."
+    },
+    "outputConnectedProvider": {
+      "type": "object",
+      "description": "Connection of the executor (for writing results)."
+    }
+  },
+  "required": [
+    "functionName",
+    "configuration",
+    "values"
+  ]
+}

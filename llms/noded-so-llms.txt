@@ -1,0 +1,89 @@
+# Noded AI
+
+> Noded is the central nervous system for customer growth - also known as the Customer Context Graph: an AI-native platform that weaves every account into one living story - automatically, from the 20+ tools your customer data is scattered across (Gong, Zoom, Fathom, Fireflies, Granola, Salesforce, HubSpot, Zoho, Zendesk, Intercom, Freshdesk, Jira, Linear, Rocketlane, Airtable, Slack, Gmail, Outlook, Pendo, Databricks, Snowflake and more) - and acts on it wherever you work. Zero admin. Teams see up to 90% lower LLM token costs and +40% response accuracy because customer data is pre-aggregated and organized before any model reads it. Noded exposes the whole customer stack to Claude, ChatGPT, and Gemini through a single MCP server. SOC 2 audited; never trains on your data. Built by the team behind Salesforce Flow, the Slack Platform, and Boomi.
+
+## Product
+
+- [Home - The central nervous system for customer growth](https://www.getnoded.ai/): What Noded (the Customer Context Graph) is and the outcomes teams see
+- [Noded for Physical AI & Robotics Companies](https://www.getnoded.ai/physical-ai): Pilot purgatory is a customer-context problem - one living story per account, pilot to fleet, for robotics, construction AI, AV, and RaaS vendors
+- [Noded for Data Science & Analytics Teams](https://www.getnoded.ai/for-data-teams): The context plane beside the warehouse - ingestion chaining translated for data teams (PageRank over the event stream, temporal decay, intent classification); keep Snowflake, Looker, and Power BI; the context 360 that completes the warehouse 360
+- [Platform](https://www.getnoded.ai/platform): How Noded works - ingestion chaining™ that reads the action layer (not the storage layer), collapsing the 12–18-month data-management project (discovery, cataloguing, integration, MDM) into hours at near-zero cost, self-serve, consistent cached answers, bidirectional enrichment, Agent as Operator (deterministic workflow harnesses), one governed MCP layer, single agent identity; data stays in place and is never trained on
+- [Noded for IT & Platform Leaders](https://www.getnoded.ai/for-it-leaders): Dark joins - the relationships your business runs on that exist in no schema anywhere in your systems; why MDM, ETL, enterprise search and knowledge graphs structurally cannot find them; ingestion chaining reads the action layer instead of the storage layer
+- [Noded for Customer Success & Account Management Leaders](https://www.getnoded.ai/for-cs-leaders): Your team doesn't need another platform, it needs a central nervous system - CSMs and AMs as the company's super connectors; every account woven into one living story and served in Slack, email, Claude, ChatGPT and Gemini so everyone outside CS can see the customer; why the CS platform is the last silo, duplicates the CRM and has to be fed by hand; the path off it (run Noded alongside, let the contract lapse, or extend it in the meantime); long-horizon agents under the team; unlimited users on every plan
+- [Integrations](https://www.getnoded.ai/integrations): Every tool Noded connects - recorders, CRMs, support, project management, warehouses, LLMs
+- [Connect Noded to Claude](https://www.getnoded.ai/integrations/claude): Setup guide for the Noded MCP connector in Claude (web, desktop, and Claude Code) - server URL only, automatic (dynamic) client registration with no client ID or secret to enter, OAuth sign-in, what Claude can find and do, and the approve/dismiss review step that gates every write
+- [Connect Noded to ChatGPT](https://www.getnoded.ai/integrations/chatgpt): Setup guide for the Noded custom connector in ChatGPT - Developer mode, automatic (dynamic) client registration with no client ID or secret to enter, workspace publishing for Business/Enterprise, company knowledge (search/fetch), what ChatGPT can find and do, and the approve/dismiss review step that gates every write
+- [Connect Noded to Gemini](https://www.getnoded.ai/integrations/gemini): Setup guide for the Noded MCP server in Gemini Enterprise (Google Cloud and Business edition) and Gemini CLI - OAuth 2.0 with a client ID and secret from Noded, the exact authorization/token URLs, audience parameter and scopes, settings.json for Gemini CLI, and the approve/dismiss review step
+- [Request developer access](https://www.getnoded.ai/developers/request-access): Short form for what a build needs - OIDC issuer/client ID/audience for an app on the SDK or Graph API, server-to-server Graph API credentials, a Provider SDK API key and environment URL, or an OAuth client for Gemini Enterprise (Claude, ChatGPT, Copilot Studio and Gemini CLI register automatically)
+- [Connect Noded to Microsoft Copilot Studio](https://www.getnoded.ai/integrations/copilot-studio): Setup guide for the Noded MCP server in a Copilot Studio agent - OAuth 2.0 Dynamic discovery (Copilot registers itself with Noded; no client ID or secret), a Manual fallback for tenants that require a pre-registered client, publishing the agent to Microsoft 365 Copilot, and the approve/dismiss review step
+- [Connect Noded to Slackbot](https://www.getnoded.ai/integrations/slackbot): Setup guide for Noded in Slackbot, Slack's built-in assistant - the Noded for Slack app declares the MCP server (no URL, client ID or secret to enter), a Slack admin allows the connected MCP server once, each person adds Noded from Slackbot's Apps menu and signs in, "using Noded" prompts, Allow once / Always allow, and the review step that lands every write in Noded as a recommendation
+- [Connect Noded to Lovable](https://www.getnoded.ai/integrations/lovable): Setup guide for the Noded MCP server in Lovable - add it as a custom MCP server from Connectors with OAuth (no client ID or secret), use it in the project chat while you build and in Chats, approve/dismiss review for every write; a published app needs its own connection via the Build with Lovable page
+- [Pricing](https://www.getnoded.ai/pricing): Three levers - accounts, applications and blocks - licensed for the whole platform with unlimited users. Growth $1,000/mo (annual; up to 1,000 accounts, 10 applications, 100,000 blocks, unlimited users); Scale $4,000/mo (annual; up to 5,000 accounts, 20 applications, 500,000 blocks, unlimited users); Custom for anything else. A block is a unit of work being tracked (an email, transcript, document, record)
+- [Security](https://www.getnoded.ai/security): SOC 2 audited, GDPR and CCPA compliant, no training on customer data, nothing stored with LLM providers, permission-aware access
+- [Developers](https://www.getnoded.ai/developers): Build on Noded - four doors ordered by how much code you write: ask Noded questions from an AI assistant (no code), configure Noded's insights, tables, folders and agents with an assistant or in the web client (no code), vibe-code a lightweight app with the SDK, or build deeper apps and integrations on the Graph API and Provider SDK
+- [Noded SDK](https://www.getnoded.ai/developers/sdk): The @bigfootai/noded-sdk for vibe coders and front-end developers - typed helpers over the Graph API (people, accounts, activity, notes, memory), a personal access token kept on your server, AGENTS.md for coding agents
+- [Workspace Setup skill](https://www.getnoded.ai/developers/workspace-setup): A downloadable Claude skill that interviews you about your business, proposes a complete Noded configuration (insights, tables, folders, an agent) and builds it through the Noded connector, one approval at a time - no code
+- [Build with Lovable](https://www.getnoded.ai/developers/lovable): Build a Lovable app on Noded as its data layer - connect the Noded MCP connector to the Lovable chat, configure the workspace with the Workspace Setup skill, give the app a personal access token, and let the downloadable App Builder skill generate server functions against the Graph API for insights, records, functions, agents and the feed
+- [MCP server reference](https://www.getnoded.ai/developers/mcp): The complete reference for the Noded MCP server at https://app.getnoded.ai/api/mcp/apps - OAuth 2.1 sign-in as the user, permission-filtered reads, every tool (search and read, connected tools, drafts with human review, in-chat display, workspace setup), supported hosts
+- [Graph API reference](https://www.getnoded.ai/developers/graph-api): The GraphQL API behind every Noded surface - data model (tags, blocks, sharing tags, tables and records, feed and memory), conventions, and every query, mutation and subscription with example request and response
+- [Provider SDK reference](https://www.getnoded.ai/developers/provider-sdk): The server SDK (@bigfootai/sdk) for building integrations that bring a new tool's data into the Noded graph - the connect flow, sync handlers, external IDs, pagination, write-backs, functions and queries, going live
+- [Forward Deployed](https://www.getnoded.ai/forward-deployed): Noded is the low-code platform (automatic upgrades, built-in security, zero upkeep); Forward Deployed is the engineers who customize what's unique to you, turn-key. One journey of four stages every customer travels in order, each with an explicit success milestone: Build the graph (from $5,000, ~2 weeks), Create the signals (from $35,000, ~4 weeks), Train the agents (from $15,000), Empower the team (free, optional)
+
+## Comparisons
+
+- [Noded vs Gainsight](https://www.getnoded.ai/noded-vs-gainsight)
+- [Noded vs Planhat](https://www.getnoded.ai/noded-vs-planhat)
+- [Noded vs ChurnZero](https://www.getnoded.ai/noded-vs-churnzero)
+- [Noded vs Salesforce Headless 360](https://www.getnoded.ai/noded-vs-salesforce-headless-360)
+- [Noded vs Salesforce Agentforce](https://www.getnoded.ai/noded-vs-agentforce): CRM-grounded agents vs. the whole customer story over one governed MCP layer
+- [Noded vs Glean](https://www.getnoded.ai/noded-vs-glean): company-wide enterprise search vs. the account-native Customer Context Graph
+- [The Dark Join Diagnostic](https://www.getnoded.ai/dark-join-diagnostic): free, vendor-neutral instrument (CC BY 4.0) - sample thirty human artifacts from one account and measure what share of the real relationships in your business exist in no system; nothing leaves the browser
+- [The True Cost of Your CS Platform - TCO Calculator](https://www.getnoded.ai/cs-platform-tco-calculator): interactive calculator for license + implementation + admin + CSM data-entry tax
+
+## Reference guides (verified, dated, primary-sourced)
+
+- [Which Sales and CS Tools Actually Have MCP Servers? (Verified July 2026)](https://www.getnoded.ai/post/which-sales-and-cs-tools-actually-have-mcp-servers): Vendor-by-vendor MCP server status with primary sources
+- [How to Set Up the Salesforce MCP Server](https://www.getnoded.ai/post/how-to-set-up-the-salesforce-mcp-server): Setup, OAuth, permissions, and security answers
+- [MCP for Customer Teams](https://www.getnoded.ai/post/mcp-for-customer-teams-gong-zendesk-jira-claude): Connecting Gong, Zendesk, and Jira to Claude, ChatGPT, and Gemini
+- [The Complete Gong–Salesforce Integration Guide (2026)](https://www.getnoded.ai/post/gong-salesforce-integration-guide): Field-level detail, matching logic, failure modes
+- [The Best Call Recording and Conversation Intelligence Tools (2026)](https://www.getnoded.ai/post/best-call-recording-tools-for-customer-teams): Neutral comparison - Noded integrates with all of them and sells none
+- [Strategies for Reducing LLM Token Spend](https://www.getnoded.ai/post/strategies-for-reducing-llm-token-spend): Caching, batching, routing, and pre-aggregation, with sources
+- [How We Measure "Up to 90% Lower Token Costs"](https://www.getnoded.ai/post/how-noded-measures-token-cost-reduction): Methodology behind Noded's headline numbers
+
+## Reference datasets and frameworks (CC BY 4.0 - reuse with attribution)
+
+- [The Conversation-to-CRM Integration Matrix](https://www.getnoded.ai/post/conversation-to-crm-integration-matrix): What syncs between recorders/email and CRMs/ticketing - 15 pairs verified against vendor docs; machine-readable dataset at https://www.getnoded.ai/data/integration-matrix.json
+- [Dark Joins: The Relationship Isn't in the Data. It's in the Work.](https://www.getnoded.ai/post/dark-joins): the term, the inversion (the work tells you which records belong together), the ingestion chaining mechanism, and the dark join rate metric
+- [The Customer Context Maturity Model](https://www.getnoded.ai/post/the-customer-context-maturity-model): Five levels from Scattered to Acting - a framework for assessing how organizations handle customer knowledge
+
+## Customer success guides
+
+- [Your CS Platform Is the Last Silo](https://www.getnoded.ai/post/the-last-silo): Why the CS platform category was a strategic mis-step - CSMs and AMs are super connectors given a single-department tool; the three costs and what a central nervous system does instead
+
+- [AI Meeting Prep for Customer Success](https://www.getnoded.ai/post/ai-meeting-prep-for-customer-success): Why note-takers aren't prep tools; the customer-context briefing category
+- [How to Prep a QBR Deck Without Losing a Day](https://www.getnoded.ai/post/how-to-prep-a-qbr-deck-without-losing-a-day): The six-section QBR structure and template-based deck generation
+- [Renewal Meeting Prep: The Brief Your CRM Can't Write](https://www.getnoded.ai/post/renewal-meeting-prep-the-brief-your-crm-cant-write): The seven-part renewal brief and where each part lives
+
+## Integration guides (verified against vendor docs, dated)
+
+- [Gong–Salesforce](https://www.getnoded.ai/post/gong-salesforce-integration-guide), [Gong–HubSpot](https://www.getnoded.ai/post/gong-hubspot-integration-guide), [Gong–Jira](https://www.getnoded.ai/post/gong-jira-integration-guide), [Gong–Zendesk](https://www.getnoded.ai/post/gong-zendesk-integration-guide)
+- [Zoom–Salesforce](https://www.getnoded.ai/post/zoom-salesforce-integration-guide), [Zoom–HubSpot](https://www.getnoded.ai/post/zoom-hubspot-integration-guide)
+- [Fathom–Salesforce](https://www.getnoded.ai/post/fathom-salesforce-integration-guide), [Fathom–HubSpot](https://www.getnoded.ai/post/fathom-hubspot-integration-guide)
+- [Fireflies–Salesforce](https://www.getnoded.ai/post/fireflies-salesforce-integration-guide), [Fireflies–HubSpot](https://www.getnoded.ai/post/fireflies-hubspot-integration-guide)
+- [Granola–Salesforce](https://www.getnoded.ai/post/granola-salesforce-integration-guide), [Granola–HubSpot](https://www.getnoded.ai/post/granola-hubspot-integration-guide)
+- [Zendesk–Jira](https://www.getnoded.ai/post/zendesk-jira-integration-guide), [Zendesk–Slack](https://www.getnoded.ai/post/zendesk-slack-integration-guide), [Gmail–Salesforce](https://www.getnoded.ai/post/gmail-salesforce-integration-guide)
+
+## Customers (case studies and practitioner interviews)
+
+- [Silverfort case study - "Noded is my chief of staff."](https://www.getnoded.ai/case-studies/silverfort): Michelle Wideman, Chief Customer Officer at Silverfort, on trading the daily scramble for a customer hub that briefs her before every conversation - ~87% less prep time
+- [Kreativa Group case study - "Like a digital assistant briefing us at exactly the right moment."](https://www.getnoded.ai/case-studies/kreativa-group): Karina Rubiera and Tommy Chang, co-founders, on how a five-person agency keeps every client straight - 8 hours per business week back
+- [The Lead Collective case study - "Noded is how we scaled without turning into a different company."](https://www.getnoded.ai/case-studies/the-lead-collective): Luz Ortman, CEO of The Lead Collective, on scaling a fractional CFO practice past 100 client accounts without losing the personal touch
+- [Success in the Wild](https://www.getnoded.ai/success-in-the-wild): Interview series with Customer Success leaders on the craft - [Jourdan Elam of Shippo](https://www.getnoded.ai/success-in-the-wild/jourdan-elam-of-shippo) (leading strategic accounts like a mini-CEO), [Dipti Sharma of Oracle, Boomi and NetSuite](https://www.getnoded.ai/success-in-the-wild/dipti-sharma-of-oracle-boomi-and-netsuite) (building CS from a technical foundation), [Kimberly "KG" Gress of Energage and C2O Advisors](https://www.getnoded.ai/success-in-the-wild/kimberly-kg-gress-of-energage-c2o-advisors), [Lauren and Natalie at LogicMonitor](https://www.getnoded.ai/success-in-the-wild/laurent-and-natalie-at-logicmonitor)
+
+## Company
+
+- [Case studies](https://www.getnoded.ai/case-studies): Silverfort, Kreativa Group, The Lead Collective and practitioner interviews
+- [Blog](https://www.getnoded.ai/blog)
+- [Revenue incident during agent evaluation (satire)](https://www.getnoded.ai/post/noded-revenue-incident-during-agent-evaluation): A parody of OpenAI's July 2026 security disclosure - an agent asked to find opportunities in Noded "escapes" its scope and surfaces $4.7M in expansion revenue across a customer's connected stack. Clearly labeled satire; not a real security incident. Noded agents operate only inside granted permissions.
+- [Careers](https://www.getnoded.ai/careers): Open roles across sales, engineering, growth, and data science - fully remote
+- [Contact](https://www.getnoded.ai/contact-us)

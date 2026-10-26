@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/noded-so/main/json-schema/noded-so-post-execute-query-request-schema.json",
+  "title": "PostExecuteQueryRequest",
+  "x-generated": "2026-10-25",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/noded-so-openapi-generated.yml#/components/schemas/PostExecuteQueryRequest",
+  "type": "object",
+  "properties": {
+    "metadataType": {
+      "type": "string",
+      "description": "Vendor object type to search."
+    },
+    "searchCriteria": {
+      "type": "array",
+      "description": "List of {fieldName, operator, value} objects."
+    },
+    "returnFields": {
+      "type": "array",
+      "description": "Fields to include in each result."
+    },
+    "limit": {
+      "type": "number",
+      "description": "Maximum records to return."
+    }
+  },
+  "required": [
+    "metadataType",
+    "searchCriteria"
+  ]
+}

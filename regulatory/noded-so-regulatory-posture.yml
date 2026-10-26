@@ -1,0 +1,58 @@
+generated: '2026-10-25'
+method: searched
+source: https://www.getnoded.ai/privacy
+signals:
+  data_retention:
+    - evidence:
+        source: https://www.getnoded.ai/privacy
+        http_status: 200
+        fetched: true
+        quote: "We keep your information for as long as necessary to fulfill the purposes outlined in this privacy notice unless otherwise required by law."
+        url: https://www.getnoded.ai/privacy
+        section: "5. HOW LONG DO WE KEEP YOUR INFORMATION?"
+        note: Retains data only as needed, with a maximum of 2 years unless law requires longer.
+    - evidence:
+        source: https://www.getnoded.ai/privacy
+        http_status: 200
+        fetched: true
+        quote: "No purpose in this notice will require us keeping your personal information for longer than 2 years."
+        url: https://www.getnoded.ai/privacy
+        section: "5. HOW LONG DO WE KEEP YOUR INFORMATION?"
+        note: Explicit maximum retention period.
+  data_subject_request:
+    - evidence:
+        source: https://www.getnoded.ai/privacy
+        http_status: 200
+        fetched: true
+        quote: "You may review, change, or terminate your account at any time."
+        url: https://www.getnoded.ai/privacy
+        section: "8. WHAT ARE YOUR PRIVACY RIGHTS?"
+        note: Provides ability to access and modify personal data.
+    - evidence:
+        source: https://www.getnoded.ai/privacy
+        http_status: 200
+        fetched: true
+        quote: "If we are relying on your consent to process your personal information, which may be express and/or implied consent depending on the applicable law, you have the right to withdraw your consent at any time."
+        url: https://www.getnoded.ai/privacy
+        section: "8. WHAT ARE YOUR PRIVACY RIGHTS?"
+        note: Right to withdraw consent.
+  global_privacy_control:
+    - evidence:
+        source: https://www.getnoded.ai/privacy
+        http_status: 200
+        fetched: true
+        quote: "We honour the Global Privacy Control (\"GPC\") signal: where your browser or extension sends it, we treat it as a rejection of non-essential storage and no analytics cookies are set."
+        url: https://www.getnoded.ai/privacy
+        section: "9. CONTROLS FOR DO-NOT-TRACK FEATURES"
+        note: Recognizes GPC signal.
+  incident_notification: []
+  subprocessors: []
+  ai_transparency: []
+  data_residency: []
+  notice_and_action: []
+  accessibility_conformance: []
+  support_lifetime: []
+  age_assurance: []
+  sbom: []
+  training_data_summary: []
+  transparency_report: []
