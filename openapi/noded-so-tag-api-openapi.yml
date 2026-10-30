@@ -1,0 +1,79 @@
+openapi: 3.2.0
+info:
+  title: Noded AI Tag API
+  version: '2026-10-25'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-10-25: 20 operation(s) read from 3 public documentation page(s) (each operation names its page in x-source). This is not the provider''s published contract; Noded AI has published no machine-readable contract that the pipeline could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 3
+    documentation: 17
+    pages-with-code: 2
+    pages-read: 3
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-10-25'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://www.getnoded.ai/developers/graph-api
+  - https://www.getnoded.ai/developers/provider-sdk
+  - https://www.getnoded.ai/developers/AGENTS.md
+servers:
+- url: https://api.getnoded.ai
+security:
+- bearer: []
+tags:
+- name: Tag
+paths:
+  /tag:
+    post:
+      operationId: post_tag
+      tags:
+      - Tag
+      summary: Searches your vendor for people or topics that can become Noded tags
+      x-source: https://www.getnoded.ai/developers/provider-sdk
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostTagRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostTagResponse'
+      x-evidence:
+        kind: documentation
+components:
+  schemas:
+    PostTagResponse:
+      type: object
+      properties:
+        items:
+          type: array
+          description: Array of Tag objects, each with alias, tagType and externalId.
+    PostTagRequest:
+      type: object
+      properties:
+        search:
+          type: string
+          description: Free text the user typed.
+        externalId:
+          type: string
+          description: Look one object up directly instead of searching.
+        tagType:
+          type: string
+          description: person or topic – what kind of tag the caller wants back.
+        metadataType:
+          type: string
+          description: Which vendor object type to search, like "account" or "user".
+      required:
+      - tagType
+      - metadataType
+  securitySchemes:
+    bearer:
+      type: http
+      scheme: bearer

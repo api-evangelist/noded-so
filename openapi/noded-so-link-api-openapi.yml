@@ -1,0 +1,84 @@
+openapi: 3.2.0
+info:
+  title: Noded AI Link API
+  version: '2026-10-25'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-10-25: 20 operation(s) read from 3 public documentation page(s) (each operation names its page in x-source). This is not the provider''s published contract; Noded AI has published no machine-readable contract that the pipeline could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 3
+    documentation: 17
+    pages-with-code: 2
+    pages-read: 3
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-10-25'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://www.getnoded.ai/developers/graph-api
+  - https://www.getnoded.ai/developers/provider-sdk
+  - https://www.getnoded.ai/developers/AGENTS.md
+servers:
+- url: https://api.getnoded.ai
+security:
+- bearer: []
+tags:
+- name: Link
+paths:
+  /{application}/link:
+    post:
+      operationId: post_application_link
+      tags:
+      - Link
+      summary: Turns a pasted URL into a BusinessObject for the given application
+      x-source: https://www.getnoded.ai/developers/provider-sdk
+      parameters:
+      - name: application
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostApplicationLinkRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostApplicationLinkResponse'
+      x-evidence:
+        kind: documentation
+components:
+  schemas:
+    PostApplicationLinkRequest:
+      type: object
+      properties:
+        url:
+          type: string
+          description: The pasted URL.
+        callbackId:
+          type: string
+          description: 'For slow fetches: identifier for later callback.'
+        callbackUrl:
+          type: string
+          description: 'For slow fetches: URL to POST the finished result.'
+      required:
+      - url
+    PostApplicationLinkResponse:
+      type: object
+      properties:
+        businessObject:
+          type: object
+          description: The document with title, content, uri and stable externalId.
+        processingStage:
+          type: string
+          description: Either "processed" or "processing".
+  securitySchemes:
+    bearer:
+      type: http
+      scheme: bearer

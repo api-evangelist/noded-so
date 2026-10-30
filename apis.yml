@@ -85,16 +85,16 @@ common:
   url: https://www.getnoded.ai/blog
 
 apis:
-- aid: noded-so:noded-so-api
-  name: Noded AI API
-  description: 'Noded AI API as documented publicly: 20 operations. Contract generated from the documentation by API Evangelist (2026-10-25);
-    not the provider''s own document.'
+- aid: noded-so:noded-so-auth-api
+  name: Noded AI Auth API
+  description: The Auth API from Noded AI — 4 operation(s) for auth.
   humanURL: https://www.getnoded.ai/developers/graph-api
   baseURL: https://api.getnoded.ai
+  tags:
+  - Auth
   properties:
   - type: OpenAPI
-    url: openapi/_ae-authored/noded-so-openapi-generated.yml
-    x-provenance: generated
+    url: openapi/noded-so-auth-api-openapi.yml
   - type: JSONSchema
     url: json-schema/noded-so-post-execute-function-request-schema.json
   - type: JSONSchema
@@ -107,7 +107,182 @@ apis:
     url: json-schema/noded-so-post-application-link-request-schema.json
   - type: JSONSchema
     url: json-schema/noded-so-get-auth-connect-response-schema.json
-
+- aid: noded-so:noded-so-execute-api
+  name: Noded AI Execute API
+  description: The Execute API from Noded AI — 2 operation(s) for execute.
+  humanURL: https://www.getnoded.ai/developers/graph-api
+  baseURL: https://api.getnoded.ai
+  tags:
+  - Execute
+  properties:
+  - type: OpenAPI
+    url: openapi/noded-so-execute-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/noded-so-post-execute-function-request-schema.json
+  - type: JSONSchema
+    url: json-schema/noded-so-post-tag-request-schema.json
+  - type: JSONSchema
+    url: json-schema/noded-so-post-sync-transcription-request-schema.json
+  - type: JSONSchema
+    url: json-schema/noded-so-post-execute-query-request-schema.json
+  - type: JSONSchema
+    url: json-schema/noded-so-post-application-link-request-schema.json
+  - type: JSONSchema
+    url: json-schema/noded-so-get-auth-connect-response-schema.json
+- aid: noded-so:noded-so-graph-api
+  name: Noded AI Graph API
+  description: The Graph API from Noded AI — 1 operation(s) for graph.
+  humanURL: https://www.getnoded.ai/developers/graph-api
+  baseURL: https://api.getnoded.ai
+  tags:
+  - Graph
+  properties:
+  - type: OpenAPI
+    url: openapi/noded-so-graph-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/noded-so-post-execute-function-request-schema.json
+  - type: JSONSchema
+    url: json-schema/noded-so-post-tag-request-schema.json
+  - type: JSONSchema
+    url: json-schema/noded-so-post-sync-transcription-request-schema.json
+  - type: JSONSchema
+    url: json-schema/noded-so-post-execute-query-request-schema.json
+  - type: JSONSchema
+    url: json-schema/noded-so-post-application-link-request-schema.json
+  - type: JSONSchema
+    url: json-schema/noded-so-get-auth-connect-response-schema.json
+- aid: noded-so:noded-so-hello-api
+  name: Noded AI Hello API
+  description: The Hello API from Noded AI — 1 operation(s) for hello.
+  humanURL: https://www.getnoded.ai/developers/graph-api
+  baseURL: https://api.getnoded.ai
+  tags:
+  - Hello
+  properties:
+  - type: OpenAPI
+    url: openapi/noded-so-hello-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/noded-so-post-execute-function-request-schema.json
+  - type: JSONSchema
+    url: json-schema/noded-so-post-tag-request-schema.json
+  - type: JSONSchema
+    url: json-schema/noded-so-post-sync-transcription-request-schema.json
+  - type: JSONSchema
+    url: json-schema/noded-so-post-execute-query-request-schema.json
+  - type: JSONSchema
+    url: json-schema/noded-so-post-application-link-request-schema.json
+  - type: JSONSchema
+    url: json-schema/noded-so-get-auth-connect-response-schema.json
+- aid: noded-so:noded-so-install-api
+  name: Noded AI Install API
+  description: The Install API from Noded AI — 1 operation(s) for install.
+  humanURL: https://www.getnoded.ai/developers/graph-api
+  baseURL: https://api.getnoded.ai
+  tags:
+  - Install
+  properties:
+  - type: OpenAPI
+    url: openapi/noded-so-install-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/noded-so-post-execute-function-request-schema.json
+  - type: JSONSchema
+    url: json-schema/noded-so-post-tag-request-schema.json
+  - type: JSONSchema
+    url: json-schema/noded-so-post-sync-transcription-request-schema.json
+  - type: JSONSchema
+    url: json-schema/noded-so-post-execute-query-request-schema.json
+  - type: JSONSchema
+    url: json-schema/noded-so-post-application-link-request-schema.json
+  - type: JSONSchema
+    url: json-schema/noded-so-get-auth-connect-response-schema.json
+- aid: noded-so:noded-so-link-api
+  name: Noded AI Link API
+  description: The Link API from Noded AI — 1 operation(s) for link.
+  humanURL: https://www.getnoded.ai/developers/graph-api
+  baseURL: https://api.getnoded.ai
+  tags:
+  - Link
+  properties:
+  - type: OpenAPI
+    url: openapi/noded-so-link-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/noded-so-post-execute-function-request-schema.json
+  - type: JSONSchema
+    url: json-schema/noded-so-post-tag-request-schema.json
+  - type: JSONSchema
+    url: json-schema/noded-so-post-sync-transcription-request-schema.json
+  - type: JSONSchema
+    url: json-schema/noded-so-post-execute-query-request-schema.json
+  - type: JSONSchema
+    url: json-schema/noded-so-post-application-link-request-schema.json
+  - type: JSONSchema
+    url: json-schema/noded-so-get-auth-connect-response-schema.json
+- aid: noded-so:noded-so-sync-api
+  name: Noded AI Sync API
+  description: The Sync API from Noded AI — 7 operation(s) for sync.
+  humanURL: https://www.getnoded.ai/developers/graph-api
+  baseURL: https://api.getnoded.ai
+  tags:
+  - Sync
+  properties:
+  - type: OpenAPI
+    url: openapi/noded-so-sync-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/noded-so-post-execute-function-request-schema.json
+  - type: JSONSchema
+    url: json-schema/noded-so-post-tag-request-schema.json
+  - type: JSONSchema
+    url: json-schema/noded-so-post-sync-transcription-request-schema.json
+  - type: JSONSchema
+    url: json-schema/noded-so-post-execute-query-request-schema.json
+  - type: JSONSchema
+    url: json-schema/noded-so-post-application-link-request-schema.json
+  - type: JSONSchema
+    url: json-schema/noded-so-get-auth-connect-response-schema.json
+- aid: noded-so:noded-so-tag-api
+  name: Noded AI Tag API
+  description: The Tag API from Noded AI — 1 operation(s) for tag.
+  humanURL: https://www.getnoded.ai/developers/graph-api
+  baseURL: https://api.getnoded.ai
+  tags:
+  - Tag
+  properties:
+  - type: OpenAPI
+    url: openapi/noded-so-tag-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/noded-so-post-execute-function-request-schema.json
+  - type: JSONSchema
+    url: json-schema/noded-so-post-tag-request-schema.json
+  - type: JSONSchema
+    url: json-schema/noded-so-post-sync-transcription-request-schema.json
+  - type: JSONSchema
+    url: json-schema/noded-so-post-execute-query-request-schema.json
+  - type: JSONSchema
+    url: json-schema/noded-so-post-application-link-request-schema.json
+  - type: JSONSchema
+    url: json-schema/noded-so-get-auth-connect-response-schema.json
+- aid: noded-so:noded-so-upsert-api
+  name: Noded AI Upsert API
+  description: The Upsert API from Noded AI — 2 operation(s) for upsert.
+  humanURL: https://www.getnoded.ai/developers/graph-api
+  baseURL: https://api.getnoded.ai
+  tags:
+  - Upsert
+  properties:
+  - type: OpenAPI
+    url: openapi/noded-so-upsert-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/noded-so-post-execute-function-request-schema.json
+  - type: JSONSchema
+    url: json-schema/noded-so-post-tag-request-schema.json
+  - type: JSONSchema
+    url: json-schema/noded-so-post-sync-transcription-request-schema.json
+  - type: JSONSchema
+    url: json-schema/noded-so-post-execute-query-request-schema.json
+  - type: JSONSchema
+    url: json-schema/noded-so-post-application-link-request-schema.json
+  - type: JSONSchema
+    url: json-schema/noded-so-get-auth-connect-response-schema.json
 x-backed-by:
 - bessemer-venture-partners
 

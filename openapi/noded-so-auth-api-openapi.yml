@@ -1,0 +1,197 @@
+openapi: 3.2.0
+info:
+  title: Noded AI Auth API
+  version: '2026-10-25'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-10-25: 20 operation(s) read from 3 public documentation page(s) (each operation names its page in x-source). This is not the provider''s published contract; Noded AI has published no machine-readable contract that the pipeline could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 3
+    documentation: 17
+    pages-with-code: 2
+    pages-read: 3
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-10-25'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://www.getnoded.ai/developers/graph-api
+  - https://www.getnoded.ai/developers/provider-sdk
+  - https://www.getnoded.ai/developers/AGENTS.md
+servers:
+- url: https://api.getnoded.ai
+security:
+- bearer: []
+tags:
+- name: Auth
+paths:
+  /auth/callback:
+    get:
+      operationId: get_auth_callback
+      tags:
+      - Auth
+      summary: auth.callback auth GET /auth/callback
+      x-source: https://www.getnoded.ai/developers/provider-sdk
+      parameters:
+      - name: state
+        in: query
+        required: true
+        schema:
+          type: string
+        description: Encoded "${connectionId}.${application}" passed from the connect step.
+      - name: code
+        in: query
+        required: false
+        schema:
+          type: string
+        description: OAuth authorization code (if using OAuth).
+      - name: apiKey
+        in: query
+        required: false
+        schema:
+          type: string
+        description: API key submitted via HTML form (if using key flow).
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetAuthCallbackResponse'
+      x-evidence:
+        kind: documentation
+  /auth/check:
+    post:
+      operationId: post_auth_check
+      tags:
+      - Auth
+      summary: auth.check auth POST /auth/check
+      x-source: https://www.getnoded.ai/developers/provider-sdk
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostAuthCheckRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostAuthCheckResponse'
+      x-evidence:
+        kind: documentation
+  /auth/connect:
+    get:
+      operationId: get_auth_connect
+      tags:
+      - Auth
+      summary: auth.connect auth GET /auth/connect
+      x-source: https://www.getnoded.ai/developers/provider-sdk
+      parameters:
+      - name: application
+        in: query
+        required: true
+        schema:
+          type: string
+        description: Which of your applications the user is connecting.
+      - name: connectionId
+        in: query
+        required: true
+        schema:
+          type: string
+        description: The platform's ID for this connection attempt.
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetAuthConnectResponse'
+      x-evidence:
+        kind: documentation
+  /auth/refresh:
+    post:
+      operationId: post_auth_refresh
+      tags:
+      - Auth
+      summary: auth.refresh auth POST /auth/refresh
+      x-source: https://www.getnoded.ai/developers/provider-sdk
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostAuthRefreshRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostAuthRefreshResponse'
+      x-evidence:
+        kind: documentation
+components:
+  schemas:
+    GetAuthConnectResponse:
+      type: object
+      properties:
+        type:
+          type: string
+          description: Either "redirect" (OAuth) or "html" (key form).
+        url:
+          type: string
+          description: When type is "redirect", the OAuth URL.
+        html:
+          type: string
+          description: When type is "html", the HTML form to render.
+    PostAuthRefreshRequest:
+      type: object
+      properties:
+        connectedProvider:
+          type: object
+          description: Object containing the existing credential.
+      required:
+      - connectedProvider
+    GetAuthCallbackResponse:
+      type: object
+      properties:
+        connectionId:
+          type: string
+          description: The connection ID to associate with the registration.
+        credential:
+          type: object
+          description: Credential object containing accessToken, refreshToken, etc.
+    PostAuthCheckRequest:
+      type: object
+      properties:
+        application:
+          type: string
+          description: The application to validate.
+        credential:
+          type: object
+          description: Credential to validate.
+      required:
+      - application
+      - credential
+    PostAuthRefreshResponse:
+      type: object
+      properties:
+        credential:
+          type: object
+          description: Refreshed credential (accessToken, refreshToken, dateExpiry, etc.).
+    PostAuthCheckResponse:
+      type: object
+      properties:
+        status:
+          type: string
+          description: '"ok" or "scope_required".'
+        message:
+          type: string
+          description: Human‑readable message when status is "scope_required".
+  securitySchemes:
+    bearer:
+      type: http
+      scheme: bearer
