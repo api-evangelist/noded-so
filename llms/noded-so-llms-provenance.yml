@@ -1,6 +1,0 @@
-generated: '2026-10-25'
-method: probed
-generator: harvest-llms.py
-source: https://www.getnoded.ai/llms.txt
-bytes: 17182
-note: saved verbatim; the provider's own document
